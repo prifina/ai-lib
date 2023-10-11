@@ -1,8 +1,19 @@
 {
-  "name": "ai-lib",
+  "name": "@prifina-ai/ai-lib",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/prifina/ai-lib.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prifina/ai-lib.git"
+  },
   "author": "prifina-admin <tero@prifina.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "Inspired by https://github.com/Stevenic/vectra and https://github.com/visheratin/web-ai",
+  "bugs": {
+    "url": "https://github.com/prifina/ai-lib/issues"
+  },
+  "homepage": "https://github.com/prifina/ai-lib#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
