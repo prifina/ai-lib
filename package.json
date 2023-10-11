@@ -2,6 +2,23 @@
   "name": "@prifina-ai/ai-lib",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
+  "exports": {
+    "import": "./dist/esm/index.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@visheratin/tokenizers-node": "^0.1.5",
+    "onnxruntime-common": "^1.16.0",
+    "onnxruntime-node": "^1.16.0",
+    "uuid": "^9.0.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/prifina/ai-lib.git"
@@ -14,6 +31,17 @@
   },
   "homepage": "https://github.com/prifina/ai-lib#readme",
   "scripts": {
+    "build": "rimraf dist && rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.0.2",
+    "rollup-plugin-node-externals": "^6.1.2"
   }
 }
